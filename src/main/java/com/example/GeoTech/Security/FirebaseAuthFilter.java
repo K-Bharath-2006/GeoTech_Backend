@@ -35,7 +35,7 @@ public class FirebaseAuthFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String authHeader = request.getHeader("Authorization");
-        System.out.println("authHeader: " + authHeader);
+//        System.out.println("authHeader: " + authHeader);
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return;
